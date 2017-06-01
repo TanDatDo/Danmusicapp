@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_app"
+        tools:context="com.dan.danmusicapp.MyMusicActivity">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteY="0dp"
+            tools:layout_editor_absoluteX="0dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/buttonMyMusicActivitySongs"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/songs"/>
+                <Button
+                    android:id="@+id/buttonMyMusicActivityArtists"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/artists" />
+                <Button
+                    android:id="@+id/buttonMyMusicActivityAlbums"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/albums"/>
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_weight="0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/buttonMyMusicActivityHome"
+                style="@style/NavigationButtonStyle"
+                android:layout_weight="1"
+                android:text="@string/home"/>
+            <Button
+                android:id="@+id/buttonMyMusicActivitySearch"
+                style="@style/NavigationButtonStyle"
+                android:layout_weight="1"
+                android:text="@string/search"/>
+            <Button
+                android:id="@+id/buttonMyMusicActivityNowPlaying"
+                style="@style/NavigationButtonStyle"
+                android:layout_weight="1"
+                android:text="@string/now_playing"/>
+            <Button
+                android:id="@+id/buttonMyMusicActivityMyMusic"
+                style="@style/NoneNavigationButtonStyle"
+                android:layout_weight="1"
+                android:text="@string/my_music"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>
