@@ -2,10 +2,34 @@
     <string name="app_name">Dan music app</string>
     <string name="home">Home</string>
     <string name="search">Search</string>
-    <string name="now_playing">Now \nPlaying</string>
-    <string name="my_music">My \nMusic</string>
-    <string name="artists">Artists</string>
-    <string name="albums">Albums</string>
-    <string name="songs">Songs</string>
+    <string name="now_playing">Now Playing</string>
+    <string name="payment">Payment</string>
+
+    <string name="main_text">Displaying the list of user\'s offline music
+    \n   Using ContentResolver to get the mp3 songs from device\'s storage
+    \n   Using Adapter to display the music in listview
+    </string>
+
+    <string name="playing_text">//Aimed to play the song
+    \n   Using MediaPlayer class to start to play the song
+    \n   Using MediaController class to control the playing
+    \n   Using Service to play the song when user not interacting with the app</string>
+
+    <string name="payment_text">Aimed to let the user upgrade the service
+    \n   Using the Payment Activity class to carry the transaction through Paypal
+    \n   Using Mobile Payment Library
+    </string>
+
+    <string name="search_text">Search screen allow to look for music from internet
+    \n  Request api from online SoundClound
+    \n  May be using HTTPURLConnection to make such api requests
+    \n </string>
+    <string name="more_info">Open detail instruction</string>
+
+    <string name="link_play_music">https://code.tutsplus.com/tutorials/create-a-music-player-on-android-project-setup--mobile-22764</string>
+
+    <string name="link_sound_cloud">https://www.sitepoint.com/develop-music-streaming-android-app/</string>
+
+    <string name="link_payment">https://developer.paypal.com/docs/classic/mobile/ht_mpl-itemPayment-Android/</string>
 
 </resources>

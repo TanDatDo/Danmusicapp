@@ -7,50 +7,51 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.dan.danmusicapp.databinding.ActivitySearchBinding;
+import com.dan.danmusicapp.databinding.ActivityPaymentBinding;
 
-public class SearchActivity extends AppCompatActivity {
+public class PaymentActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ActivitySearchBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_search);
+        ActivityPaymentBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_payment);
+
         //using data binding to find and set OnClickListener to Home button in the layout file of this activity
-        binding.searchToMain.setOnClickListener(new View.OnClickListener() {
+        binding.paymentToMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //Create a new intent to open the Home Activity
-                Intent homeIntent = new Intent(SearchActivity.this, MainActivity.class);
+                Intent homeIntent = new Intent(PaymentActivity.this, MainActivity.class);
                 //Start the new activity
                 startActivity(homeIntent);
             }
         });
+        //using data binding to find and set OnClickListener to Search button in the layout file of this activity
+        binding.paymentToSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Create a new intent to open the Search Activity
+                Intent searchIntent = new Intent(PaymentActivity.this, SearchActivity.class);
+                //Start the new activity
+                startActivity(searchIntent);
+            }
+        });
         //using data binding to find and set OnClickListener Now Playing button in the layout file of this activity
-        binding.searchToPlaying.setOnClickListener(new View.OnClickListener() {
+        binding.paymentToPlaying.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //Create a new intent to open the NowPlaying Activity
-                Intent nowPlayingIntent = new Intent(SearchActivity.this, NowPlayingActivity.class);
+                Intent nowPlayingIntent = new Intent(PaymentActivity.this, NowPlayingActivity.class);
                 //Start the new activity
                 startActivity(nowPlayingIntent);
             }
         });
-        // using data binding to find and set OnClickListener to My Music button in the layout file of this activity
-        binding.searchToPayment.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //Create a new intent to open My Music Activity
-                Intent myMusicIntent = new Intent(SearchActivity.this, PaymentActivity.class);
-                //Start the new activity
-                startActivity(myMusicIntent);
-            }
-        });
-        ////navigate to the website for more detail instruction about this screen
-        binding.buttonSearch.setOnClickListener(new View.OnClickListener() {
+        //navigate to the website for more detail instruction about this screen
+        binding.buttonPayment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //get the url of the website from current news object
-                String url = getString(R.string.link_sound_cloud);
+                String url = getString(R.string.link_payment);
                 //sent intent to the website
                 Intent intent = new Intent();
                 intent.setAction(Intent.ACTION_VIEW);
@@ -64,4 +65,3 @@ public class SearchActivity extends AppCompatActivity {
         });
     }
 }
-

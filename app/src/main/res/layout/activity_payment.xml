@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.dan.danmusicapp.MainActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="@dimen/padding_app">
+        android:padding="@dimen/padding_app"
+        tools:context="com.dan.danmusicapp.PaymentActivity">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:text="@string/main_text"
+            android:text="@string/payment_text"
             android:textSize="@dimen/text_sz_large" />
 
         <Button
-            android:id="@+id/button_main"
+            android:id="@+id/button_payment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -30,27 +30,28 @@
             android:orientation="horizontal">
 
             <Button
-                style="@style/NoneNavigationButtonStyle"
+                android:id="@+id/payment_to_main"
+                style="@style/NavigationButtonStyle"
                 android:layout_weight="1"
                 android:text="@string/home" />
 
             <Button
-                android:id="@+id/main_to_search"
+                android:id="@+id/payment_to_search"
                 style="@style/NavigationButtonStyle"
                 android:layout_weight="1"
                 android:text="@string/search" />
 
             <Button
-                android:id="@+id/main_to_playing"
+                android:id="@+id/payment_to_playing"
                 style="@style/NavigationButtonStyle"
                 android:layout_weight="1"
                 android:text="@string/now_playing" />
 
             <Button
-                android:id="@+id/main_to_payment"
-                style="@style/NavigationButtonStyle"
+                style="@style/NoneNavigationButtonStyle"
                 android:layout_weight="1"
                 android:text="@string/payment" />
         </LinearLayout>
+
     </LinearLayout>
 </layout>
